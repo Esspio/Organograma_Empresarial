@@ -1,5 +1,6 @@
 import './Form.css';
 import Textfield from '../Textfield';
+import SuspendedList from '../SuspendedList';
 
 export const Form = () => {
     const times = [
@@ -19,6 +20,7 @@ export const Form = () => {
                 <Textfield label="Nome" placeholder="Digite o seu nome"/>
                 <Textfield label="Cargo" placeholder="Digite o seu cargo"/>
                 <Textfield label="Imagem" placeholder="Informe o endereço da imagem"/>
+                <SuspendedList label="Time" itens={times}/>
             </form>
         </section>
     )
