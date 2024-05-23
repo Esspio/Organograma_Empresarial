@@ -4,7 +4,7 @@ import SuspendedList from '../SuspendedList';
 import Button from '../Button';
 import { useState } from 'react';
 
-export const Form = () => {
+export const Form = (props) => {
     const times = [
         'Programação',
         'Front-End',
@@ -28,6 +28,10 @@ export const Form = () => {
                      '\n - Cargo: '  + cargo  +
                      '\n - Imagem: ' + imagem +
                      '\n - Time: '   + time);
+
+        props.onIncluirColaborador({
+            nome: nome, cargo: cargo, imagem: imagem, time: time
+        })
     }
 
     return (
