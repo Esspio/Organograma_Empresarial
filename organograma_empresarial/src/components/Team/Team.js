@@ -1,3 +1,4 @@
+import { Collaborator } from '../Collaborator/Collaborator';
 import './Team.css';
 
 export const Team = (props) => {
@@ -10,6 +11,7 @@ export const Team = (props) => {
             <h3 style={styleBorderColorTeam}>
                 {props.nome}
             </h3>
+            <Collaborator />
         </section>
     )
 }
