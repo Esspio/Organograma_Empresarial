@@ -5,15 +5,6 @@ import Button from '../Button';
 import { useState } from 'react';
 
 export const Form = (props) => {
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Desing',
-        'Mobile',
-        'Inovação e Gestão'
-    ];
 
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
@@ -60,7 +51,7 @@ export const Form = (props) => {
 
                 <SuspendedList 
                     label="Time"
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     onAlteracao={valor => setTime(valor)}
                     required="true"/>

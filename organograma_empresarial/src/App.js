@@ -53,7 +53,9 @@ function App() {
   return (
     <div className="App">
       <Banner/>
-      <Form onIncluirColaborador={colaborador => colaboradorIncluido(colaborador)}/>
+      <Form times={times.map(time => times.nome)}
+            onIncluirColaborador={colaborador => colaboradorIncluido(colaborador)}/>
+      
       {times.map(
         time => <Team key={time.nome}
                       nome={time.nome}
