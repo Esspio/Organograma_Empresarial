@@ -11,7 +11,13 @@ export const Team = (props) => {
             <h3 style={styleBorderColorTeam}>
                 {props.nome}
             </h3>
-            <Collaborator />
+            
+            <div className='collaborators'>
+                {props.colaboradores.map(colaborador => <Collaborator
+                                                                nome={colaborador.nome}
+                                                                cargo={colaborador.cargo}
+                                                                imagem={colaborador.imagem} />)}
+            </div>
         </section>
     )
 }

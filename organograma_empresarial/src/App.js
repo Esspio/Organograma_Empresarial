@@ -48,19 +48,23 @@ function App() {
 
   const colaboradorIncluido = (colaborador) => {
     console.log(colaborador);
+    setColaboradores([...colaboradores, colaborador])
   }
 
   return (
     <div className="App">
       <Banner/>
-      <Form times={times.map(time => times.nome)}
+      <Form times={times.map(time => time.nome)}
             onIncluirColaborador={colaborador => colaboradorIncluido(colaborador)}/>
       
       {times.map(
         time => <Team key={time.nome}
                       nome={time.nome}
                       corPrimaria={time.corPrimaria}
-                      corSecundaria={time.corSecundaria}/>)}
+                      corSecundaria={time.corSecundaria}
+                      colaboradores={colaboradores.filter(
+                                                          colaborador => colaborador.time === time.nome
+                      )}/>)}
     </div>
   );
 }
