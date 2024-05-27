@@ -1,9 +1,9 @@
 import './Collaborator.css';
 
-export const Collaborator = ({nome, cargo, imagem}) => {
+export const Collaborator = ({bkgColor, nome, cargo, imagem}) => {
     return (
         <div className='collaborator'>
-            <div className='header'>
+            <div className='header' style={{backgroundColor: bkgColor}}>
                 <img src={imagem} alt={nome}/>
             </div>
             <div className='footer'>

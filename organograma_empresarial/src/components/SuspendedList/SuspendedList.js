@@ -8,6 +8,7 @@ export const SuspendedList = (props) =>{
                 required={props.required}
                 value={props.valor}
                 onChange={event => props.onAlteracao(event.target.value)}>
+                <option value=""></option>
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                 })}
