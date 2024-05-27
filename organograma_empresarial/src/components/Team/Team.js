@@ -7,17 +7,19 @@ export const Team = (props) => {
     const styleBorderColorTeam = {borderColor: props.corPrimaria};
 
     return (
-        <section className="team" style={styleBackgroundColorTeam}>
-            <h3 style={styleBorderColorTeam}>
-                {props.nome}
-            </h3>
-            
-            <div className='collaborators'>
-                {props.colaboradores.map(colaborador => <Collaborator
-                                                                nome={colaborador.nome}
-                                                                cargo={colaborador.cargo}
-                                                                imagem={colaborador.imagem} />)}
-            </div>
-        </section>
+        (props.colaboradores.length > 0) ?
+            <section className="team" style={styleBackgroundColorTeam}>
+                <h3 style={styleBorderColorTeam}>
+                    {props.nome}
+                </h3>
+                
+                <div className='collaborators'>
+                    {props.colaboradores.map(colaborador => <Collaborator
+                                                                    nome={colaborador.nome}
+                                                                    cargo={colaborador.cargo}
+                                                                    imagem={colaborador.imagem} />)}
+                </div>
+            </section>
+        : ''
     )
 }

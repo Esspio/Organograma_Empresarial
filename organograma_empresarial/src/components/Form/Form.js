@@ -23,6 +23,14 @@ export const Form = (props) => {
         props.onIncluirColaborador({
             nome: nome, cargo: cargo, imagem: imagem, time: time
         })
+
+        clearValues();
+    }
+
+    function clearValues(){
+        setNome('');
+        setCargo('');
+        setImagem('');
     }
 
     return (
